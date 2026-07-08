@@ -1,0 +1,38 @@
+{
+  "program": {
+    "name": "ΠΜΣ Τεχνολογίες Πληροφορικής και Επικοινωνιών (ΤΠΕ)",
+    "year": 2026,
+    "institution": "...",
+    "committee": "Αυγερινός + Νάκος"
+  },
+  "paths": {
+    "csv": "basic.csv",
+    "documents_root": "Pgs_ΤΠΕ",
+    "output_dir": "dashboard",
+    "scored_csv": "basic_scored.csv",
+    "students_json": "dashboard/_students.json",
+    "workflow_script": "admission-evaluator/workflow.js"
+  },
+  "relevance": {
+    "0": { "label": "Άσχετο", "multiplier": 0.1, "badge": "secondary" },
+    "1": { "label": "Σχετικό ΠΕ/ΗΜΜΥ", "multiplier": 1.0, "badge": "success" },
+    "2": { "label": "Μερικώς (Μαθ/Φυσ/Τοπογράφοι)", "multiplier": 0.6, "badge": "info" }
+  },
+  "scoring": {
+    "degree":     { "weight": 35, "label": "Βαθμός Πτυχίου × Συνάφεια" },
+    "courses":    { "weight": 30, "label": "Μαθήματα ΜΟ" },
+    "pubs":       { "weight": 10, "label": "Δημοσιεύσεις" },
+    "refs":       { "weight": 8,  "label": "Συστατικές" },
+    "thesis":     { "weight": 6,  "label": "Διπλωματική" },
+    "master":     { "weight": 4,  "label": "Μεταπτυχιακό" },
+    "experience": { "weight": 4,  "label": "Εμπειρία" },
+    "bonus":      { "weight": 3,  "label": "Πριμοδότηση" }
+  },
+  "manual_overrides": {
+    "6786": { "degree_relevance": 2, "note": "Αγρονόμων & Τοπογράφων ΕΜΠ → rel=2" }
+  },
+  "thresholds": {
+    "green": 70,
+    "yellow": 50
+  }
+}
